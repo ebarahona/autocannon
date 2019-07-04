@@ -7,7 +7,9 @@
     "autocannon": "autocannon.js"
   },
   "scripts": {
-    "test": "standard && tap test/*.test.js"
+    "test": "standard && tap test/*.test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "pre-commit": [
     "test"
@@ -58,6 +60,8 @@
     "shallow-clone": "^2.0.2",
     "table": "^4.0.3",
     "timestring": "^5.0.0",
-    "xtend": "^4.0.1"
-  }
+    "xtend": "^4.0.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
